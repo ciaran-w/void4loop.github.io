@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ciaran.wang</id>
+    <title>Void4Loop</title>
+    <updated>2020-04-08T12:28:45.635Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ciaran.wang"/>
+    <link rel="self" href="https://ciaran.wang/atom.xml"/>
+    <subtitle>尘埃存在过的痕迹</subtitle>
+    <logo>https://ciaran.wang/images/avatar.png</logo>
+    <icon>https://ciaran.wang/favicon.ico</icon>
+    <rights>All rights reserved 2020, Void4Loop</rights>
+    <entry>
+        <title type="html"><![CDATA[Hello, World!]]></title>
+        <id>https://ciaran.wang/hello-gridea/</id>
+        <link href="https://ciaran.wang/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p><em>Hello World!</em><br>
+<strong>Hello World!</strong><br>
+<code>hello world</code></p>
+]]></content>
+    </entry>
+</feed>
