@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ciaran.wang</id>
     <title>Void4Loop</title>
-    <updated>2020-04-08T13:42:44.819Z</updated>
+    <updated>2020-04-08T13:51:42.939Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ciaran.wang"/>
     <link rel="self" href="https://ciaran.wang/atom.xml"/>
-    <subtitle>尘埃存在过的痕迹</subtitle>
+    <subtitle>Oaks from little acorns grow.</subtitle>
     <logo>https://ciaran.wang/images/avatar.png</logo>
     <icon>https://ciaran.wang/favicon.ico</icon>
     <rights>All rights reserved 2020, Void4Loop</rights>
