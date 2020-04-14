@@ -1,104 +1,127 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Void4Loop</title>
-<link rel="shortcut icon" href="https://ciaran.wang/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://ciaran.wang/media/css/tailwind.css">
-<link rel="stylesheet" href="https://ciaran.wang/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Void4Loop - Atom Feed" href="https://ciaran.wang/atom.xml">
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+    <meta charset="utf-8" />
+  <title>Gridea | Void4Loop</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <link rel="stylesheet" href="https://ciaran.wang/styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+   <script src="https://cdn.staticfile.org/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+ </head>
+ <body>
+     <div class="sidebar animated fadeInDown">
+   <div class="logo-title">
+    <div class="title">
+     <img src="https://ciaran.wang/images/avatar.png?v=1586873666736" style="width:127px;" />
 
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163096992-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-163096992-1');
-  </script>
-    
-
-  <meta name="description" content="Oaks from little acorns grow." />
-</head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+     <div class="description">
+      <p>Oaks from little acorns grow.</p>
+     </div>
     </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Home
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Archives
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Tags
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        About
-      </a>
-    
-    <a href="https://ciaran.wang/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
-</div>
+   </div>
+   <ul class="social-links">
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        Gridea
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+
+    
+
+    
+
+    
+
+    <li><a href="https://github.com/void4loop"><i class="fa fa-github"></i></a></li>
+ 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+   </ul>
+   <div class="footer">
+    <div class="by_farbox">
+   Powered by Gridea
+    </div>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163096992-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163096992-1');
+</script>
+
+
+    </div>
+   </div>
+  </div>
+  <div class="main">
+      <div class="page-top animated fadeInDown">
+    <div class="nav">
+
+     <li><a  href="/">Home</a></li>
+
+     <li><a  href="/archives">Archives</a></li>
+
+     <li><a  href="/tags">Tags</a></li>
+
+     <li><a  href="/post/about">About</a></li>
+
+
+    </div>
+    <div class="information">
+     <div class="back_btn">
+      <li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li>
+     </div>
+    </div>
+   </div>
+   <div class="autopagerize_page_element">
+    <div class="content">
+              
+     <div class="post animated fadeInDown">
+      <div class="post-title">
+       <h3><a href="https://ciaran.wang/hello-gridea/">Hello, World!</a></h3>
+      </div>
+      <div class="post-content">
+       <p></p>
+      </div>
+      <div class="post-footer">
+       <div class="meta">
+        <div class="info">
+         <i class="fa fa-sun-o"></i>
+         <span class="date">2018-12-12</span>
+         <i class="fa fa-tag"></i>
+         
+         <a class="tag" href="https://ciaran.wang/fH08eI7cP/" title="Gridea">Gridea </a>
+         
+        </div>
+       </div>
+      </div>
+     </div>
+     
+     <div class="pagination">
+      <ul class="clearfix">
+            
         
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://ciaran.wang/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Hello, World!
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2018-12-12</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        Hello World!
-Hello World!
-hello world
 
-      </div>
-      <a href="https://ciaran.wang/hello-gridea/" class="btn">
-        Read more
-      </a>
+      </ul>
+     </div>
     </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://ciaran.wang/post-images/hello-gridea.png" alt="Hello, World!">
-    
+   </div>
   </div>
-  
-      </div>
+  <script src="https://ciaran.wang/media/scripts/jquery.js"></script>
+  <script src="https://ciaran.wang/media/scripts/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://ciaran.wang/media/scripts/jquery.appear.js"></script>
 
-      
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by Gridea
-</footer>
 
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://ciaran.wang/media/scripts/main.js"></script>
-</body>
+ </body>
 </html>

@@ -1,162 +1,127 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Void4Loop</title>
-<link rel="shortcut icon" href="https://ciaran.wang/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://ciaran.wang/media/css/tailwind.css">
-<link rel="stylesheet" href="https://ciaran.wang/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Void4Loop - Atom Feed" href="https://ciaran.wang/atom.xml">
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+     <meta charset="utf-8" />
+  <title>Void4Loop</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <link rel="stylesheet" href="https://ciaran.wang/styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+   <script src="https://cdn.staticfile.org/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+ </head>
+ <body>
+     <div class="sidebar animated fadeInDown">
+   <div class="logo-title">
+    <div class="title">
+     <img src="https://ciaran.wang/images/avatar.png?v=1586873666736" style="width:127px;" />
+
+     <div class="description">
+      <p>Oaks from little acorns grow.</p>
+     </div>
+    </div>
+   </div>
+   <ul class="social-links">
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163096992-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-163096992-1');
-  </script>
     
 
-  <meta name="description" content="Oaks from little acorns grow." />
-</head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
+    
 
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    
+
+    <li><a href="https://github.com/void4loop"><i class="fa fa-github"></i></a></li>
+ 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+   </ul>
+   <div class="footer">
+    <div class="by_farbox">
+   Powered by Gridea
     </div>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163096992-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163096992-1');
+</script>
+
+
+    </div>
+   </div>
   </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Home
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Archives
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Tags
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        About
-      </a>
-    
-    <a href="https://ciaran.wang/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
-</div>
+  <div class="main">
+      <div class="page-top animated fadeInDown">
+    <div class="nav">
 
-    <div class="max-w-4xl w-full mx-auto ">
-      
-        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
-  <div class="flex-1 order-2 md:order-1 md:pr-16">
-    <div class="text-4xl font-bold text-center md:text-left">
-      Void4Loop
+     <li><a  href="/">Home</a></li>
+
+     <li><a  href="/archives">Archives</a></li>
+
+     <li><a  href="/tags">Tags</a></li>
+
+     <li><a  href="/post/about">About</a></li>
+
+
     </div>
-    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
-      Oaks from little acorns grow.
+    <div class="information">
+     <div class="back_btn">
+      <li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li>
+     </div>
     </div>
-    
-    
-      <div class="mt-8 flex items-center">
-        
-          <div class="text-gray-500 mr-2">
-            Follow me 👉
-          </div>
-        
-        
-          
-        
-          
-            
-              <a href="mailto:ciaranwang97@gmail.com" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-mail-line"></i>
-              </a>
-            
-          
-        
-          
-            
-              <a href="https://github.com/void4loop" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-github-line"></i>
-              </a>
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+   </div>
+   <div class="autopagerize_page_element">
+    <div class="content">
+              
+     <div class="post animated fadeInDown">
+      <div class="post-title">
+       <h3><a href="https://ciaran.wang/Git与Github/">Git与Github简易实用指南，五分钟轻松入门</a></h3>
       </div>
-    
-  </div>
-  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
-    <img class="rounded-full object-cover" src="https://ciaran.wang/images/avatar.png?v=1586873124430" alt="Void4Loop" width="100%" height="100%">
-  </div>
-</header>
-      
-
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+      <div class="post-content">
+       <p></p>
+      </div>
+      <div class="post-footer">
+       <div class="meta">
+        <div class="info">
+         <i class="fa fa-sun-o"></i>
+         <span class="date">2020-04-08</span>
+         <i class="fa fa-tag"></i>
+         
+         <a class="tag" href="https://ciaran.wang/lCZZeLsrB/" title="Tools">Tools </a>
+         
+        </div>
+       </div>
+      </div>
+     </div>
+     
+     <div class="pagination">
+      <ul class="clearfix">
+            
         
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://ciaran.wang/Git与Github/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Git与Github简易实用指南，五分钟轻松入门
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-04-08</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        [toc]
-1. Introduction
-​		Git和Github，就算没有用过，也或多或少有所耳闻，那么这两个东西究竟是干嘛的呢？
-​		首先，注意区分一下，Git与Github并不是一个东西，Git是由那位“Fuck Nvidia！...
-      </div>
-      <a href="https://ciaran.wang/Git与Github/" class="btn">
-        Read more
-      </a>
+
+      </ul>
+     </div>
     </div>
-    
+   </div>
   </div>
-  
-      </div>
+  <script src="https://ciaran.wang/media/scripts/jquery.js"></script>
+  <script src="https://ciaran.wang/media/scripts/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://ciaran.wang/media/scripts/jquery.appear.js"></script>
 
-      
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by Gridea
-</footer>
 
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://ciaran.wang/media/scripts/main.js"></script>
-</body>
-
+ </body>
 </html>
