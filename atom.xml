@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ciaran.wang</id>
     <title>Void4Loop</title>
-    <updated>2020-04-15T03:41:01.944Z</updated>
+    <updated>2020-04-16T13:40:27.647Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ciaran.wang"/>
     <link rel="self" href="https://ciaran.wang/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://ciaran.wang/images/avatar.png</logo>
     <icon>https://ciaran.wang/favicon.ico</icon>
     <rights>All rights reserved 2020, Void4Loop</rights>
+    <entry>
+        <title type="html"><![CDATA[cin.ignore()函数]]></title>
+        <id>https://ciaran.wang/cin.ignore()函数/</id>
+        <link href="https://ciaran.wang/cin.ignore()函数/">
+        </link>
+        <updated>2020-04-16T13:38:11.000Z</updated>
+        <content type="html"><![CDATA[<p>今天在hackerrank刷题的时候发现已给代码中有这样的一行：</p>
+<pre><code class="language-c++">cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+</code></pre>
+<p>不解其意，在搜索相关的答案后发现，原来这是清空输入流的意思，可能是OJ在输入数据过程中，为了能够在每次输入数据时，使前面的数据不被后面的数据影响所特意写的。</p>
+<p>一开始我猜测是控制输入的位数的，然后用下面这段代码测试：</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+int main()
+{
+	int n;
+	cin&gt;&gt;n;
+	cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+	cout &lt;&lt; n &lt;&lt;endl;
+	return 0;
+}
+</code></pre>
+<p>（在用这个代码测试后发现，输入流超过10位数字时，就会出下错误，返回结果2147483647，原来是超过C语言中int的范围了，2147483647是int的最大取值。）</p>
+<p><strong>cin.ignore()函数</strong>是从输入流中提取一定数目的字符，如：</p>
+<pre><code class="language-c++">cin.ignore(num,ch) //从输入流cin中提取num个字符，遇到ch则停止
+cin.ignore(num)  //直接从输入流提取num个字符，输入的字符数量要大于num
+</code></pre>
+<p>cin.ignore()每忽略一个字符都要计数和比较字符，所以常用它来清除以“\n”,EOF结束的输入缓冲区内容，消除上一次输入对下一次输入的影响。如：</p>
+<pre><code class="language-c++">cin.ignore(1024,'\n'); //把第一个参数设置足够大，在这个范围内读取到 回车 后，把回车前面输入流的字符连同回车一同清除
+cin.clear();
+cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n') ;//直接清空输入流（C++）
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Git与Github简易实用指南，五分钟轻松入门]]></title>
         <id>https://ciaran.wang/Git与Github/</id>
