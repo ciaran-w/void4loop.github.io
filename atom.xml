@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ciaran.wang</id>
     <title>Void4Loop</title>
-    <updated>2020-04-16T13:40:27.647Z</updated>
+    <updated>2020-04-17T02:52:27.356Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ciaran.wang"/>
     <link rel="self" href="https://ciaran.wang/atom.xml"/>
@@ -10,6 +10,60 @@
     <logo>https://ciaran.wang/images/avatar.png</logo>
     <icon>https://ciaran.wang/favicon.ico</icon>
     <rights>All rights reserved 2020, Void4Loop</rights>
+    <entry>
+        <title type="html"><![CDATA[🤡犯傻日记]]></title>
+        <id>https://ciaran.wang/fanshariji/</id>
+        <link href="https://ciaran.wang/fanshariji/">
+        </link>
+        <updated>2020-04-17T02:48:54.000Z</updated>
+        <content type="html"><![CDATA[<h5 id="2020年4月16日">2020年4月16日</h5>
+<hr>
+<p>今天在刷题的时候，做到这样的一道题：</p>
+<figure data-type="image" tabindex="1"><img src="https://ciaran.wang/post-images/1587091773376.png" alt="" loading="lazy"></figure>
+<p>我一开始给出的解法是这样的：</p>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+
+void update(int *a,int *b) {
+    // Complete this function 
+    (*a) = (*a) + (*b);
+    (*b) = abs((*a)-(*b));   
+}
+
+int main() {
+    int a, b;
+    int *pa = &amp;a, *pb = &amp;b;
+    
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    update(pa, pb);
+    printf(&quot;%d\n%d&quot;, a, b);
+
+    return 0;
+}
+</code></pre>
+<p>编译能过，但是WA。当时我百思不得其解，到底是哪里错了呢？后来我看了其他人的解法之后发现，是（* a）的值在经过了第一条语句之后已经改变了，所以需要一个变量来存放（* a）的初始值。顿时觉得自己太憨了，所以记录一下，提醒自己以后要多注意这个问题。以下是修正后的代码：</p>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+
+void update(int *a,int *b) {
+    // Complete this function 
+    int temp = (*a);
+    (*a) = (*a) + (*b);
+    (*b) = abs(temp-(*b));   
+}
+
+int main() {
+    int a, b;
+    int *pa = &amp;a, *pb = &amp;b;
+    
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    update(pa, pb);
+    printf(&quot;%d\n%d&quot;, a, b);
+
+    return 0;
+}
+</code></pre>
+<p>还从这次犯傻经历中学到，以后再出现类似问题，纠结10分钟无果后，及时去参考其他人的代码，说不定能给自己启发。同时，看其他人的解法，也有利于扩展思路，就像我是用abs函数来计算绝对值，但也有人用if来输出相反数。对数组的逆序输出，我是用reverse函数，但也有人是用容器、两个for循环（++、--）来输出。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[cin.ignore()函数]]></title>
         <id>https://ciaran.wang/cin.ignore()函数/</id>
